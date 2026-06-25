@@ -8,10 +8,12 @@
         <HorizontalStackLayout Margin="0, 20, 0, 0">
             <Label 
                 Text="Username:"
+                FontSize="16"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 Margin="10"
-                WidthRequest="130"/>
+                WidthRequest="180"
+                MaximumWidthRequest="180"/>
             <Border Stroke="#CCCCCC"
                     StrokeThickness="1"
                     BackgroundColor="#FFFFFF"
@@ -24,16 +26,19 @@
                        PlaceholderColor="#999999"
                        TextColor="#333333"
                        BackgroundColor="Transparent"
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="Center"
+                       MinimumWidthRequest="150"/>
             </Border>
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="0, 20, 0, 0">
             <Label 
                 Text="Email:"
+                FontSize="16"
                 VerticalOptions="Center" 
                 Margin="10"
                 HorizontalOptions="Start"
-                WidthRequest="130"/>
+                WidthRequest="180"
+                MaximumWidthRequest="180"/>
             <Border Stroke="#CCCCCC"
                     StrokeThickness="1"
                     BackgroundColor="#FFFFFF"
@@ -46,16 +51,19 @@
                        PlaceholderColor="#999999"
                        TextColor="#333333"
                        BackgroundColor="Transparent"
-                       HorizontalOptions="Center"/>
+                       HorizontalOptions="Center"
+                       MinimumWidthRequest="150"/>
             </Border>
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="0, 20, 0, 0">
             <Label 
                 Text="Password:"
+                FontSize="16"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 Margin="10"
-                WidthRequest="130"/>
+                WidthRequest="180"
+                MaximumWidthRequest="180"/>
             <Border Stroke="#CCCCCC"
                     StrokeThickness="1"
                     BackgroundColor="#FFFFFF"
@@ -63,22 +71,25 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="4" />
                 </Border.StrokeShape>
-                <Entry x:Name="enterPassword"
+                <Entry x:Name="entryPassword"
                        Placeholder="Enter Password..."
                        PlaceholderColor="#999999"
                        TextColor="#333333"
                        BackgroundColor="Transparent"
                        HorizontalOptions="Center"
-                       IsPassword="True"/>
+                       IsPassword="True"
+                       MinimumWidthRequest="150"/>
             </Border>
         </HorizontalStackLayout>
         <HorizontalStackLayout Margin="0, 20, 0, 0">
             <Label 
                 Text="Confirm Password:"
+                FontSize="16"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 Margin="10"
-                WidthRequest="130"/>
+                WidthRequest="180"
+                MaximumWidthRequest="180"/>
             <Border Stroke="#CCCCCC"
                     StrokeThickness="1"
                     BackgroundColor="#FFFFFF"
@@ -86,14 +97,31 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="4" />
                 </Border.StrokeShape>
-                <Entry x:Name="enterConfirm"
+                <Entry x:Name="entryConfirm"
                        Placeholder="Confirm Password..."
                        PlaceholderColor="#999999"
                        TextColor="#333333"
                        BackgroundColor="Transparent"
                        HorizontalOptions="Center"
-                       IsPassword="True"/>
+                       IsPassword="True"
+                       MinimumWidthRequest="150"/>
             </Border>
         </HorizontalStackLayout>
+        <Border x:Name="errorBorder"
+                IsVisible="False"
+                BackgroundColor="#FFDCFE"
+                HorizontalOptions="Center"
+                Margin="0, 20, 0, 0">
+            <Label x:Name="errorLbl"
+                   IsVisible="False"
+                   TextColor="Red"
+                   FontSize="14"
+                   Padding="20"/>
+        </Border>
+        <Button Text="Sign Up"
+                Margin="0, 30, 0, 0"
+                HorizontalOptions="End"
+                Clicked="onSubmitClicked"
+                MinimumWidthRequest="150"/>
     </VerticalStackLayout>
 </ContentPage>

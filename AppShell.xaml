@@ -10,5 +10,5 @@
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:SignupPage}"
-        Route="SignupPage" />
+        Route="SignupPage"/>
 </Shell>
